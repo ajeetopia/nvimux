@@ -1,30 +1,19 @@
--- since this is just an example spec, don't actually load anything here and return an empty spec
--- stylua: ignore
-if true then return {} end
-
--- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
---
--- In your plugin files, you can:
--- * add extra plugins
--- * disable/enabled LazyVim plugins
--- * override the configuration of LazyVim plugins
 return {
-    -- add gruvbox
-        --{ "ellisonleao/gruvbox.nvim" },
-
+    -- Set color scheme
     {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
+        "rose-pine/neovim",
+        name = "rose-pine",
+        opts = {
+            styles = {
+                italic = false
+            }
+        }
     },
-
-    -- Configure LazyVim to load gruvbox
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "tokyonight",
-        },
+            colorscheme = "rose-pine"
+        }
     },
 
     -- override nvim-cmp and add cmp-emoji
@@ -122,16 +111,5 @@ return {
         config = function()
             require("nvim-tmux-navigation").setup({ disable_when_zoomed = true })
             end
-    },
-
-    -- add any tools you want to have installed below
-    {
-        "williamboman/mason.nvim",
-        opts = {
-            ensure_installed = {
-                "stylua",
-                "shfmt",
-            },
-        },
     },
 }
