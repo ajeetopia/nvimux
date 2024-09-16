@@ -16,6 +16,12 @@ return {
         }
     },
 
+    -- Disable annoying automatic pairing
+    {
+        "echasnovski/mini.pairs",
+        enabled = false
+    },
+
     -- override nvim-cmp and add cmp-emoji
     {
         "hrsh7th/nvim-cmp",

@@ -9,3 +9,4 @@ vim.opt.virtualedit = "all"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.relativenumber = false
 vim.g.autoformat = false
+vim.diagnostic.disable()
