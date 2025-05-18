@@ -55,9 +55,6 @@ return {
             },
     },
 
-    -- Enable clangd for C++
-    { import = "lazyvim.plugins.extras.lang.clangd" },
-
     -- add more treesitter parsers
     {
         "nvim-treesitter/nvim-treesitter",
@@ -109,8 +106,6 @@ return {
         },
     },
 
-    -- use mini.starter instead of alpha
-        --{ import = "lazyvim.plugins.extras.ui.mini-starter" },
     -- tmux integration
     {
         "alexghergh/nvim-tmux-navigation",
